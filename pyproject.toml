@@ -1,0 +1,22 @@
+[project]
+name = "impact-forecast"
+version = "1.0.0"
+description = "Impact Forecast Algorithm (IFA) - Bayesian-inspired risk quantification for security teams."
+authors = [{ name = "Thor Thor", email = "codethor@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "matplotlib>=3.5.0",
+    "numpy>=1.22.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0.0"]
+
+[project.scripts]
+ifa = "ifa.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
