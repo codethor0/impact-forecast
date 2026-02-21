@@ -72,6 +72,7 @@ Risk levels:
 
 - **Full Article:** [docs/impact-first-security-model-2026.md](docs/impact-first-security-model-2026.md) — IFSM theory, four impact levers, and 90-day rollout
 - **Data Sources & Methodology:** [docs/methodology-and-sources.md](docs/methodology-and-sources.md) — Primary sources and likelihood ratio rationale
+- **Roadmap:** [docs/roadmap.md](docs/roadmap.md) — Planned enhancements and future factors
 
 ## Examples
 
