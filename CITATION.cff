@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use the Impact Forecast Algorithm (IFA) in your work, please cite this repository."
+title: "Impact Forecast Algorithm (IFA)"
+authors:
+  - family-names: "Thor"
+    given-names: "Thor"
+    email: "codethor@gmail.com"
+version: "1.0.0"
+date-released: "2026-02-21"
+license: "MIT"
+repository-code: "https://github.com/codethor0/impact-forecast"
+keywords:
+  - cybersecurity
+  - risk quantification
+  - Bayesian
+  - ransomware
+  - security engineering
+  - risk metrics
+  - impact-first security
+type: software
+abstract: >
+  Impact Forecast Algorithm (IFA) is a Bayesian-inspired risk quantification
+  model for operational security teams. It calculates the probability of
+  material impact from evidence-based likelihood ratios derived from open-source
+  threat intelligence, as part of the Impact-First Security Model (IFSM).
