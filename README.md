@@ -52,6 +52,21 @@ python examples/ifa_example_2026_profile.py
 ifa --prior 0.25 --factor "kev_exposed:1.8:Known exploited vulns on edge devices" --factor "phishing_resistant_mfa:0.65:FIDO2/WebAuthn for admins"
 ```
 
+## Algorithm (IFA) Summary
+
+Given a prior probability p and likelihood ratios LR_i:
+
+- odds = p / (1 - p)
+- updated_odds = odds * (product of all LR_i)
+- posterior = updated_odds / (1 + updated_odds)
+
+Risk levels:
+
+- LOW:       p < 0.10
+- MODERATE:  0.10 <= p < 0.20
+- ELEVATED:  0.20 <= p < 0.35
+- HIGH:      p >= 0.35
+
 ## Documentation
 
 - **Full Article:** [docs/impact-first-security-model-2026.md](docs/impact-first-security-model-2026.md) — IFSM theory, four impact levers, and 90-day rollout

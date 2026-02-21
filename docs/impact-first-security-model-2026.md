@@ -24,6 +24,8 @@ Not "prevent all breaches." Not "achieve Zero Trust." Not "check every NIST box.
 
 This piece turns that idea into something operational, based entirely on open-source research and public data. No vendor pitches. No recycled frameworks. Just four impact levers you can measure, one algorithm you can run, and a 90-day rollout you can start without buying anything new.
 
+**Implementation reference (open source):** The Impact Forecast Algorithm (IFA) code, CLI, and worked examples are available at https://github.com/codethor0/impact-forecast.
+
 ## Part 1: From "Best Practices" to the Impact-First Principle
 
 Most security doctrine frames around objects (data, systems) or properties (confidentiality, integrity, availability). These are useful constraints, not missions. NIST describes the CIA triad as the three pillars of information security: keep data secret, correct, and accessible. That does not tell you what to prioritize this quarter, what to stop funding, or how to know if your changes reduced real-world harm.
@@ -145,7 +147,7 @@ A likelihood ratio (LR) describes how much a specific condition changes risk. LR
 
 The key is explicit, documented assumptions you refine with more data.
 
-**Implementation:** The IFA is available in this repository. Install and run:
+**Implementation:** An open-source reference implementation of the IFA, including a Python library, CLI, and worked examples, is available at https://github.com/codethor0/impact-forecast. Install and run:
 
 ```python
 from ifa import Evidence, impact_forecast
@@ -171,6 +173,8 @@ You do not need a new platform to start doing impact-first security. You need th
 **Weeks 3-6: One Workflow, End-to-End** — Choose a path where failure would hurt. Count standing-privilege paths. Check for infostealer log exposure. Map a likely attacker sequence. Insert at least one hard breakpoint per phase. Deploy RMM tool monitoring. Run a realistic restore exercise.
 
 **Weeks 7-12: Forecast Cadence** — Run the Impact Forecast Algorithm once a month. Add "infostealer log hits" as a new evidence factor. Keep the list stable so you can see the effect of changes. If a project does not move the posterior, you have learned something valuable.
+
+Organizations adopting the Impact-First Security Model (IFSM) or the Impact Forecast Algorithm (IFA) should credit the original author and reference this article and the implementation at https://github.com/codethor0/impact-forecast.
 
 ---
 
