@@ -1,6 +1,9 @@
 """Smoke tests for visualization helpers."""
 
+import warnings
+
 import matplotlib
+
 matplotlib.use("Agg")
 
 import pytest
@@ -40,3 +43,12 @@ def test_visualize_forecast_empty_factors(tmp_path):
     results = impact_forecast(prior_p=0.25, evidence=evidence)
     fig = visualize_forecast(results, save_path=str(tmp_path / "empty.png"))
     assert fig is not None
+
+
+def test_visualize_forecast_headless_backend_emits_no_show_warning(sample_results):
+    """Agg backend should not emit a non-interactive show warning."""
+    with warnings.catch_warnings(record=True) as record:
+        warnings.simplefilter("always")
+        fig = visualize_forecast(sample_results)
+    assert fig is not None
+    assert not [w for w in record if "non-interactive" in str(w.message).lower()]

@@ -125,5 +125,9 @@ def visualize_forecast(
     plt.tight_layout()
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    plt.show()
+
+    # Avoid non-interactive backend warnings while preserving interactive behavior.
+    backend = plt.get_backend().lower()
+    if "agg" not in backend:
+        plt.show()
     return fig
